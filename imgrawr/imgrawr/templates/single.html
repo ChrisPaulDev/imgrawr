@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="left">
+    <div id="single">
+        <img src="/static/{{uuid}}">
+    </div>
+    
+    {% for t in tags %}
+        <p>
+            <span class="vote">{{t.vote}}</span> 
+            <a href="/search/{{t.tag_id}}"><span>{{t.tag_id}}</span></a> 
+            {% if user.is_authenticated %}
+            <span data-tag="{{t.tag_id}}" data-img="{{uuid}}" class="upvote">^</span>
+            {% endif %}
+        </p>
+    {% endfor %}
+</div>
+
+<div class="related">
+    related
+</div>
+{% endblock %}

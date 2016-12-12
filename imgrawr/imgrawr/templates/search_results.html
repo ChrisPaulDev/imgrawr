@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for image in images %}
+        <div class="thumb"><a href="/view/{{image.id}}"><img src="/static/thumbnails/{{image.id}}"></a></div>
+    {% endfor %}
+{% endblock %}

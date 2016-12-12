@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% if user.is_authenticated %}
+        <h1>WELCOME {{ user.username }}</h1>
+    {% endif %}
+
+    {% for image in images %}
+        <div class="thumb"><a href="/view/{{image.id}}"><img src="/static/thumbnails/{{image.id}}"></a></div>
+    {% endfor %}
+{% endblock %}

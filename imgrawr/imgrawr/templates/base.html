@@ -1,0 +1,46 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/static/site.css" type="text/css" media="screen">
+    <script type="text/javascript" src="/static/jquery-3.1.1.min.js">
+        
+    </script>
+    <script type="text/javascript" src="/static/site.js">
+        
+    </script>
+</head>
+<body>
+    <div id="top">
+        <div class="header_center">
+            <div class="logo">imgrawr</div>
+            
+            <div id="secondary_nav">
+                <ul class="user_nav">
+                    <li id="global_search_container">
+                        <div class="search_container search_closed">
+                            <form class="search_form" method="get" action="/search/">
+                                <input type="text" autocomplete="off" class="search" name="q">
+                                <div class="search_icon_container">
+                                    <div class="icon_search"></div>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                    {% if not user.is_authenticated %}
+                    <li class="signin_link">
+                        <a class="topbar_icon signin_register " href="{% url 'account_login' %}">sign in</a>
+                        <div id="FlipInfo-Container"></div>
+                    </li>
+                    <li id="register">
+                        <a class="topbar_icon signin_register " href="{% url 'registration_register' %}">sign up</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>

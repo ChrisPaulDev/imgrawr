@@ -1,0 +1,104 @@
+body {
+    background: black;
+    font-family: 'Open Sans',sans-serif;
+    color: #f2f2f2;
+    height: 100%;
+    margin: 0;
+    font-size: 14px;
+}
+
+#top {
+    width: 100%;
+    background-color: #34373c;
+    font-size: 15px;
+    height: 50px;
+    position: relative;
+    top: 0;
+}
+
+.header_center {
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    float: left;
+    width: 83px;
+    height: 34px;
+    background: black;
+}
+
+#secondary_nav {
+    float: right;
+    position: relative;
+    margin-right: -15px;   
+}
+
+#top .user_nav {
+    list-style: none;
+    margin: 0;
+}
+
+#top .user_nav, #top .user_nav li {
+    padding: 0;
+    position: relative;
+}
+
+#top .user_nav li {
+    float: left;
+    padding: 0;
+    position: relative;
+}
+
+#top .user_nav a {
+    cursor: pointer;
+    color: #f2f2f2;
+    text-decoration: none;
+    display: block;
+    padding: 16px 10px;
+    position: relative;
+}
+
+#top .user_nav a.topbar_icon.signin_register {
+    padding: 3px 15px 7px;
+    margin-top: 13px;
+    border-radius: 50px;
+}
+
+.user_nav {
+    float: left;
+}
+
+#container {
+    margin: 10px auto;
+    width: 1000px;
+}
+
+#container .thumb {
+    display: block;
+    float: left;
+    height: 180px;
+    margin: 5px;
+    width: 180px;
+}
+
+#single img {
+    width: 700px;
+}
+
+.left {
+    float: left;
+    width: 700px;
+}
+
+.related {
+    float: right;
+    margin: 0 0 0 100px;
+    width: 200px;
+}
+
+.clear {
+    height: 0;
+    clear: both;
+}
