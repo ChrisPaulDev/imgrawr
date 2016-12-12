@@ -107,3 +107,8 @@ STATICFILES_DIRS = (
 STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = '/'
 REGISTRATION_OPEN = True
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
